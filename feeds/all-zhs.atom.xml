@@ -1,2 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>pages@winsweet</title><link href="http://winsweet.github.com/" rel="alternate"></link><link href="http://winsweet.github.com/feeds/all-zhs.atom.xml" rel="self"></link><id>http://winsweet.github.com/</id><updated>2013-02-19T10:20:00+08:00</updated><entry><title>Hello World!</title><link href="http://winsweet.github.com/hello-world.html" rel="alternate"></link><updated>2013-02-19T10:20:00+08:00</updated><author><name>winsweet</name></author><id>tag:winsweet.github.com,2013-02-19:hello-world.html</id><summary type="html">&lt;p&gt;First post!&lt;/p&gt;</summary></entry></feed>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>pages@winsweet</title><link href="http://winsweet.github.com/" rel="alternate"></link><link href="http://winsweet.github.com/feeds/all-zhs.atom.xml" rel="self"></link><id>http://winsweet.github.com/</id><updated>2013-03-07T21:54:00+08:00</updated><entry><title>TeamToy非完全使用手册</title><link href="http://winsweet.github.com/make_teamtoy_work.html" rel="alternate"></link><updated>2013-03-07T21:54:00+08:00</updated><author><name>winsweet</name></author><id>tag:winsweet.github.com,2013-03-07:make_teamtoy_work.html</id><summary type="html">&lt;p&gt;折腾了几个小时终于把&lt;a href="http://teamtoy.net"&gt;TeamToy&lt;/a&gt;在本地安装成功并升级到最新的版本。&lt;br /&gt;
+刚开始大致是按照&lt;a href="http://ftqq.com"&gt;方糖气球&lt;/a&gt;提供的&lt;a href="http://ftqq.com/2013/01/teamtoy-manual/"&gt;TeamToy完全使用手册&lt;/a&gt;&lt;br /&gt;
+后面基本是排错过程了。&lt;br /&gt;
+本地没有安装php，装了个最新版本php-5.4.12  &lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;configure&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;with&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;apxs2&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="err"&gt;\`&lt;/span&gt;&lt;span class="n"&gt;apxs&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;dir&lt;/span&gt;&lt;span class="err"&gt;\`&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;with&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;mysql&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;with&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;gd&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;with&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;curl&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;with&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;zlib&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;dir&lt;/span&gt;&lt;span class="o"&gt;=/&lt;/span&gt;&lt;span class="n"&gt;usr&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;local&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;zlib&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;enable&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;mbstring&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;当然这是最终的版本的，经过无数次试错，重新编译，相比方糖指明的&lt;code&gt;mysql&lt;/code&gt; &lt;code&gt;gd&lt;/code&gt; &lt;code&gt;curl&lt;/code&gt;&lt;br /&gt;
++ &lt;code&gt;--with-apxs2&lt;/code&gt;，用于生成apache module&lt;br /&gt;
++ &lt;code&gt;--with-zlib&lt;/code&gt;(需要单独安装), 处理在线更新时出现的  &lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nx"&gt;Fatal&lt;/span&gt; &lt;span class="nx"&gt;error&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;Call&lt;/span&gt; &lt;span class="nx"&gt;to&lt;/span&gt; &lt;span class="kc"&gt;undefined&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="nx"&gt;gzinflate&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;--enable-mbstring&lt;/code&gt;, 处理在线更新时出现的  &lt;/p&gt;
+&lt;p&gt;Fatal error: Call to undefined function mb_strlen()&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;php.ini&lt;/code&gt;的改动&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="mi"&gt;159&lt;/span&gt;&lt;span class="n"&gt;c159&lt;/span&gt;
+&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;  &lt;span class="n"&gt;short_open_tag&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;On&lt;/span&gt;
+&lt;span class="o"&gt;---&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;short_open_tag&lt;/span&gt;
+&lt;span class="mi"&gt;270&lt;/span&gt;&lt;span class="n"&gt;c270&lt;/span&gt;
+&lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;zlib&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;output_compression&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;On&lt;/span&gt; 
+&lt;span class="o"&gt;---&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;zlib&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;output_compression&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Off&lt;/span&gt;
+&lt;span class="mi"&gt;273&lt;/span&gt;&lt;span class="n"&gt;c273&lt;/span&gt;
+&lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;zlib&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;output_compression_level&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;6&lt;/span&gt;
+&lt;span class="o"&gt;---&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;zlib&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;output_compression_level&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary></entry><entry><title>Hello World!</title><link href="http://winsweet.github.com/hello-world.html" rel="alternate"></link><updated>2013-02-19T10:20:00+08:00</updated><author><name>winsweet</name></author><id>tag:winsweet.github.com,2013-02-19:hello-world.html</id><summary type="html">&lt;p&gt;First post!&lt;/p&gt;</summary></entry></feed>
