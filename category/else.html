@@ -108,14 +108,13 @@
 刚开始大致是按照<a href="http://ftqq.com">方糖气球</a>提供的<a href="http://ftqq.com/2013/01/teamtoy-manual/">TeamToy完全使用手册</a><br />
 后面基本是排错过程了。<br />
 本地没有安装php，装了个最新版本php-5.4.12  </p>
-<div class="codehilite"><pre><span class="p">.</span><span class="o">/</span><span class="n">configure</span> <span class="o">--</span><span class="n">with</span><span class="o">-</span><span class="n">apxs2</span><span class="o">=</span><span class="err">\`</span><span class="n">apxs</span><span class="o">-</span><span class="n">dir</span><span class="err">\`</span> <span class="o">--</span><span class="n">with</span><span class="o">-</span><span class="n">mysql</span> <span class="o">--</span><span class="n">with</span><span class="o">-</span><span class="n">gd</span> <span class="o">--</span><span class="n">with</span><span class="o">-</span><span class="n">curl</span> <span class="o">--</span><span class="n">with</span><span class="o">-</span><span class="n">zlib</span><span class="o">-</span><span class="n">dir</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">zlib</span> <span class="o">--</span><span class="n">enable</span><span class="o">-</span><span class="n">mbstring</span>
+<div class="codehilite"><pre><span class="p">.</span><span class="o">/</span><span class="n">configure</span> <span class="o">--</span><span class="n">with</span><span class="o">-</span><span class="n">apxs2</span><span class="o">=</span><span class="err">`</span><span class="n">apxs</span><span class="o">-</span><span class="n">dir</span><span class="err">`</span> <span class="o">--</span><span class="n">with</span><span class="o">-</span><span class="n">mysql</span> <span class="o">--</span><span class="n">with</span><span class="o">-</span><span class="n">gd</span> <span class="o">--</span><span class="n">with</span><span class="o">-</span><span class="n">curl</span> <span class="o">--</span><span class="n">with</span><span class="o">-</span><span class="n">zlib</span><span class="o">-</span><span class="n">dir</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">zlib</span> <span class="o">--</span><span class="n">enable</span><span class="o">-</span><span class="n">mbstring</span>
 </pre></div>
 
 
 <p>当然这是最终的版本的，经过无数次试错，重新编译，相比方糖指明的<code>mysql</code> <code>gd</code> <code>curl</code><br />
-+ <code>--with-apxs2</code>，用于生成apache module<br />
-+ <code>--with-zlib</code>(需要单独安装), 处理在线更新时出现的  </p>
-<div class="codehilite"><pre><span class="nx">Fatal</span> <span class="nx">error</span><span class="o">:</span> <span class="nx">Call</span> <span class="nx">to</span> <span class="kc">undefined</span> <span class="kd">function ...</span></pre></div> 
+<em> <code>--with-apxs2</code>，用于生成apache module<br />
+</em> <code>--with-zlib</code>(需要单独安装), 处理在线更新时出现的<code>Fatal error: Call to undefined function ...</code></p> 
 			<a class="btn primary xsmall" href="../make_teamtoy_work.html">more ...</a>
 		</div>
 	</div>	
